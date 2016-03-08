@@ -19,7 +19,7 @@ try:
         numero = random.randint(0, 999999)
         url = "http://localhost:1234/" + str(numero)
         print 'Answering back...'
-        recvSocket.send("HTTP/1.1 308 Permanent Redirect \r\n" +
+        recvSocket.send("HTTP/1.1 302 Found \r\n" +
                         "Location: " + url + "\r\n" +
                         "<html><body><h1> Your being redirected again!</h1>" +
                         "</body></html>" + "\r\n")
